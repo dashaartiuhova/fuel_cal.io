@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container calc">
+            <div class="  top-nav">
+                <div class="w-50 bg-blue rounded-top-left cursor" id='panel_1'>
+                    Середній розхід на 100 км
+                </div>
+                <div class="w-50 bg-white rounded-top-right cursor"  id='panel_2'>
+                    Розхід на відстань
+                </div>
+            </div>
+            <div class="average">
+                <div class="rounded-bottom bg-white inputs ">
+                    <div class="item task">
+                        Дізнайтеся середню витрату палива автомобіля на 100 кілометрів по пройденій відстані та кількості літрів витраченого пального.
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Витрачено палива
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"type="number" class="border-left border w-50">
+                                <div class="border-right bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">л</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Пройдена відстань
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"type="number" class="border-left border w-50">
+                                <div class="border-right bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">км</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Вартість палива
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"type="number" class="border-left border w-50">
+                                <div class="border-right bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">грн/л</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50">
+                            <button class="border bg-white border-radius  btn cursor" id="average-clear" onclick="clear('average')">Очистити</button>  
+                        </div>
+                        <div class="w-50">
+                            <button class="border bg-purple border-radius  btn cursor average-calc" id="average-calc" disabled>Розрахувати</button>  
+                        </div>
+                    </div>
+
+                </div>
+                <div class="result rounded-bottom bg-blue">
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Середній розхід
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"readonly class="border-left bg-blue border-white w-50">
+                                <div class="border-right border-white bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">л/100км</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Середня вартість 1 км
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text" readonly class="border-left bg-blue border-white w-50">
+                                <div class="border-right border-white bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">грн/1 км</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Загальна вартість
+                            </div>
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text" readonly class="border-left bg-blue border-white w-50">
+                                <div class="border-right border-white bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="length">
+                <div class="rounded-bottom bg-white inputs ">
+                    <div class="item task">
+                        Дізнайтеся скільки пального ви витратите у поїздці, знаючи відстань, яку плануєте проїхати, а також середню витрату палива вашого автомобіля.
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 p-2">
+                                Витрата палива автомобіля
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"type="number" class="border-left border w-50">
+                                <div class="border-right bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">л/100 км</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 p-2">
+                                Відстань поїздки
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"type="number" class="border-left border w-50">
+                                <div class="border-right bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">км</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Вартість палива
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"type="number" class="border-left border w-50">
+                                <div class="border-right bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">грн/л</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50">
+                          <button class="border bg-white border-radius  btn" id="length-clear">Очистити</button>  
+                        </div>
+                        <div class="w-50">
+                            <button class="border bg-purple border-radius  btn length-calc" id="length-calc" disabled>Розрахувати</button>  
+                        </div>
+                    </div>
+                </div>
+                <div class="result rounded-bottom bg-blue">
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Середній розхід
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text"readonly class="border-left bg-blue border-white w-50">
+                                <div class="border-right border-white bg-blue w-50 ">
+                                    <div class="a-self-center m-auto" id='label-fuel'>л/100км</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Середня вартість 1 км
+                            </div>
+                            
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text" readonly class="border-left bg-blue border-white w-50">
+                                <div class="border-right border-white bg-blue w-50 ">
+                                    <div class="a-self-center m-auto">грн/1 км</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="w-50 a-self-center text-left ">
+                            <div class="weight-500 ">
+                                Загальна вартість
+                            </div>
+                        </div>
+                        <div class="w-50">
+                            <div class="input">
+                                <input type="text" readonly class="border-left bg-blue border-white w-50">
+                                <div class="border-right border-white bg-blue w-50 ">
+                                    <div class="a-self-center m-auto" id='label-cost'>грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

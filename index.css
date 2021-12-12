@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600&display=swap');
+
+* {
+	margin: 0;
+  padding: 0;
+  outline: 0;
+}
+html,
+body {
+  font-size: 16px;
+  height: 100%;
+  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+    min-height: 100%;
+    max-width: 1700px;
+    margin: auto;
+    
+}
+.container{
+    padding: 0 20%;
+}
+.calc{
+  position: fixed;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+  width: 400px;
+}
+.rounded-top-right{
+border-radius:0 25px  0 0;
+}
+.rounded-top-left{
+  border-radius:25px 0  0 0;
+  }
+.rounded-bottom{
+  border-radius:0 0 25px 25px  ;
+}
+.bg-white{
+background-color: white;
+color: #5029EE;
+}
+.bg-blue{
+background-color: #5029EE;
+color: white;
+}
+.top-nav{
+  display: flex;
+  font-size: 12px;
+}
+.w-50{
+  width: 50%;
+}
+.top-nav .w-50{
+  border-bottom:3px solid #5029EE;
+  padding: 20px;
+  text-align: center;
+}
+.inputs{
+  font-size: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.border{
+  border: 1px solid #5029EE;
+  
+}
+.border-white{
+  border: 1px solid #fff;
+}
+.border-radius{
+  border-radius: 16px;
+  
+}
+.border-left{
+border-radius: 16px 0 0 16px;
+
+}
+.border-right{
+  border-radius:0 16px   16px 0;
+  
+}
+.input{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+.bg-white input:focus{
+  border: 3px solid #5029EE;
+}
+.btn.bg-white:hover{
+  background-color: whitesmoke;
+}
+.input .w-50{
+  display: flex;
+}
+.item .w-50{
+  padding: 0 10px;
+}
+.a-self-center{
+  align-self: center;
+}
+.m-auto{
+  margin:0 auto;
+}
+.text-left{
+  text-align: end;
+}
+.p-2{
+  padding: 0 15px;
+}
+.weight-500{
+  font-weight: 500;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+}
+.task{
+  color: rgba(0, 0, 0, 0.753);
+}
+.btn{
+  padding: 10px  20px;
+  width: 100%;
+
+}
+.bg-purple{
+  background: #5029EE80;
+  color: white;
+}
+.btn.bg-purple:disabled{
+  background-color: #5029ee2f;
+}
+.bg-purple:hover{
+  background: #5029eeb4;
+}
+.result{
+  padding:  20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.length{
+  display: none;
+}
+.cursor:hover{
+  cursor: pointer;
+  
+}
+.result{
+  display: none;
+}
